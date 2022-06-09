@@ -1,0 +1,5 @@
+name: Form API custom-site-settings
+type: module
+description: Create a custom page that will be accessible at custom-site-settings.
+package: ffwagency
+core_version_requirement: ^8.8 || ^9

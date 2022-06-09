@@ -1,0 +1,4 @@
+# Permissions
+administer mymodule:
+  title: 'Administer settings for CSS'
+  description: 'Allows access the custom-site-settings' 

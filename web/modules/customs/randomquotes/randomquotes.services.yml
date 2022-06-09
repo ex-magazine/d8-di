@@ -1,0 +1,4 @@
+services:
+  randomquotes.shows:
+    class: Drupal\randomquotes\Games\ShowQuotes
+    arguments: [""]

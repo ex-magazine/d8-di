@@ -1,0 +1,5 @@
+name: RandomQuotes
+type: module
+description: Create RandomQuotes service.
+package: ffwagency
+core_version_requirement: ^8.8 || ^9
