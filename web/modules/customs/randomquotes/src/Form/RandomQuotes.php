@@ -48,7 +48,8 @@ class RandomQuotes extends FormBase {
     $form['quotes_name'] = array(
       '#type' => 'textfield',
       '#title' => $this->t('Random Quotes:'),
-      '#required' => TRUE,
+      '#required' => TRUE,   
+      '#maxlength' => 256,
       '#description' => $this->t('This text will appear random'),
       '#default_value' => $this->quotesService->getQuotesValue(),          
     );   
