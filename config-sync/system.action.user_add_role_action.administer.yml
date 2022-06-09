@@ -1,0 +1,14 @@
+uuid: 0b891d78-1a9a-4e02-8a8a-cfec5da1be1e
+langcode: en
+status: true
+dependencies:
+  config:
+    - user.role.administer
+  module:
+    - user
+id: user_add_role_action.administer
+label: 'Add the Administer role to the selected user(s)'
+type: user
+plugin: user_add_role_action
+configuration:
+  rid: administer

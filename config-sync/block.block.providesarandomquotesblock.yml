@@ -1,0 +1,20 @@
+uuid: 5de74bdc-fdbc-4107-8891-806de349635d
+langcode: en
+status: true
+dependencies:
+  module:
+    - randomquotes
+  theme:
+    - bartik
+id: providesarandomquotesblock
+theme: bartik
+region: sidebar_first
+weight: 0
+provider: null
+plugin: randomquotes_block
+settings:
+  id: randomquotes_block
+  label: 'Provides a Random Quotes block'
+  provider: randomquotes
+  label_display: visible
+visibility: {  }

@@ -1,0 +1,10 @@
+uuid: eeae73fb-a3a6-45e7-8a5e-0582a36e2951
+langcode: en
+status: true
+dependencies: {  }
+id: administer
+label: Administer
+weight: 3
+is_admin: null
+permissions:
+  - 'administer mymodule'

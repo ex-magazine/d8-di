@@ -1,0 +1,20 @@
+uuid: 232c5d91-128a-4eda-b3fe-7ef73dbc1cea
+langcode: en
+status: true
+dependencies:
+  config:
+    - core.entity_view_mode.node.full
+    - field.field.node.page.body
+    - node.type.page
+  module:
+    - user
+_core:
+  default_config_hash: g1S3_GLaxq4l3I9RIca5Mlz02MxI2KmOquZpHw59akM
+id: node.page.full
+targetEntityType: node
+bundle: page
+mode: full
+content: {  }
+hidden:
+  body: true
+  links: true

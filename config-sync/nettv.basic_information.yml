@@ -1,0 +1,7 @@
+movienight: Saturday
+playlist:
+  sort: 'Title (A-Z)'
+  maxlength: 99
+url: 'http://example.com'
+_core:
+  default_config_hash: BhJGm0zRwHB3oPKWmPyr-us82ITzR3ng0wvDzor1GmI
