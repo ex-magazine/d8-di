@@ -1,4 +1,4 @@
-uuid: 5de74bdc-fdbc-4107-8891-806de349635d
+uuid: 1f870093-9f99-40f5-855c-3a7572a16ca9
 langcode: en
 status: true
 dependencies:
@@ -9,7 +9,7 @@ dependencies:
 id: providesarandomquotesblock
 theme: bartik
 region: sidebar_first
-weight: 0
+weight: -7
 provider: null
 plugin: randomquotes_block
 settings:

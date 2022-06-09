@@ -2,8 +2,7 @@
 custom_site_settings.setting_form:
   path: '/custom-site-settings'
   defaults:
-    _form:  '\Drupal\custom_site_settings\Form\SettingForm'
-    _controller: '\Drupal\custom_site_settings\Controller\CustomSiteController::customAccessPage'
+    _form:  '\Drupal\custom_site_settings\Form\SettingForm'   
     _title: 'Setting form'
   requirements:
     _permission: 'administer mymodule'
