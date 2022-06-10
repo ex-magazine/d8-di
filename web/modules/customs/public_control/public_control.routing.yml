@@ -1,0 +1,10 @@
+
+public_control.article_form:
+  path: '/public-control'
+  defaults:
+    _form:  '\Drupal\public_control\Form\ArticleForm'
+    _title: 'Article form'
+  requirements:
+    _permission: 'access content'
+
+
