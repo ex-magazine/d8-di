@@ -1,0 +1,5 @@
+name: DB Bundles Article
+type: module
+description: Create a table with | nid | uid | timestamp.
+package: ffwagency
+core_version_requirement: ^8.8 || ^9

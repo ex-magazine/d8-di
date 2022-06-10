@@ -1,0 +1,68 @@
+<?php
+
+/**
+ * Implements hook_install()
+ *
+ */
+function db_bundles_article_install() {
+  // Insert some example data into our schema.
+  $entries = [
+    [
+      'nid' => 89,
+      'uid' => 1,
+      'timestamp' => 1654229264,
+    ],
+    [
+      'nid' => 80,
+      'uid' => 1,
+      'timestamp' => 1654229264,     
+    ],
+  ];
+
+  $connection = \Drupal::database();
+  foreach ($entries as $entry) {
+    $connection->insert('db_bundles_article')->fields($entry)->execute();
+  }
+}
+
+/**
+ * Implements hook_schema().
+ *
+ */
+function db_bundles_article_schema() {
+  $schema['db_bundles_article'] = [
+    'description' => 'Store all node views data',
+    'fields' => [
+      'aid' => [
+        'type' => 'serial',
+        'not null' => TRUE,
+        'description' => 'Primary Key: Unique Article log ID.',
+      ],
+      'nid' => [
+        'type' => 'int',
+        'not null' => TRUE,
+        'default' => 0,
+        'description' => "Creator node's {node}.nid",
+      ],
+      'uid' => [
+        'type' => 'int',
+        'not null' => TRUE,
+        'default' => 0,
+        'description' => "Creator user's {users}.uid",
+      ],
+      'timestamp' => [
+        'type' => 'int',
+        'not null' => TRUE,
+        'default' => 0,
+        'description' => "Creator timestamp",
+      ],      
+    ],
+    'primary key' => ['aid'],
+    'indexes' => [
+      'nid' => ['nid'],
+      'uid' => ['uid'],      
+    ],
+  ];
+
+  return $schema;
+}
