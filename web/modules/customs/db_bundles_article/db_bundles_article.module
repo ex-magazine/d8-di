@@ -4,3 +4,78 @@
  * @file
  * Database API.
  */
+
+use Drupal\Core\Entity\Display\EntityViewDisplayInterface;
+use Drupal\Core\Entity\EntityInterface;
+
+/**
+ * Implements hook_ENTITY_TYPE_view().
+ *
+ */
+function db_bundles_article_node_view(
+  array &$build,
+  EntityInterface $node,
+  EntityViewDisplayInterface $display,
+  $view_mode) {
+  
+  $current_user = \Drupal::currentUser();  
+ 
+  // $uid = $current_user->id();
+  // $user_mail = $current_user->getEmail();
+  // $user_display_name = $current_user->getDisplayName();
+  // $user_account_name = $current_user->getAccountName()
+  // $user_roles = $current_user->getRoles();
+  // $current_user->isAnonymous();
+  // $current_user->isAuthenticated();
+  // $current_user->getLastAccessedTime();
+
+  $connection = \Drupal::service('database');
+
+  if ($node->getType() == 'article' && $view_mode == 'full') {    
+   
+    if (checkStatitics($node->id()) == FALSE) {     
+      $result = $connection->insert('db_bundles_article')
+      ->fields([
+        'nid' => $node->id(),
+        'uid' => $current_user->id(),
+        'timestamp' => \Drupal::time()->getRequestTime(),
+        'statitics' => 1
+      ])
+      ->execute();
+    } else {     
+      $num_updated = $connection->update('db_bundles_article')
+        ->fields([
+          'statitics' => getStatitics($node->id()) + 1,          
+        ])
+        ->condition('nid', $node->id(), '=')
+        ->execute();
+    }
+   
+    $build['simpletest_example_test_section'] = [
+      '#markup' => t('The statitics is @num', array('@num' => getStatitics($node->id()))),
+      '#weight' => -99,
+    ];
+  }
+}
+
+function checkStatitics($nid) {
+  $database = \Drupal::database();  
+  $query = $database->query("SELECT * FROM {db_bundles_article} WHERE nid = :nid", [
+    ':nid' => $nid,
+  ]);
+  $result = $query->fetchAll();
+  if ($result) {
+    return TRUE;
+  } else {
+    return FALSE;
+  } 
+}
+
+function getStatitics($nid) {
+  $database = \Drupal::database();  
+  $query = $database->query("SELECT statitics FROM {db_bundles_article} WHERE nid = :nid", [
+    ':nid' => $nid,
+  ]);
+  $result = $query->fetchAssoc();  
+  return $result['statitics'];
+}

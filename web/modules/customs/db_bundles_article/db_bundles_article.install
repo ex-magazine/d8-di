@@ -1,5 +1,13 @@
 <?php
 
+
+/**
+ * Implements hook_uninstall().
+ */
+function db_bundles_article_uninstall() {
+  \Drupal::database()->schema()->dropTable('db_bundles_article');
+}
+
 /**
  * Implements hook_install()
  *
@@ -11,11 +19,13 @@ function db_bundles_article_install() {
       'nid' => 89,
       'uid' => 1,
       'timestamp' => 1654229264,
+      'statitics' => 10,
     ],
     [
       'nid' => 80,
       'uid' => 1,
       'timestamp' => 1654229264,     
+      'statitics' => 10,
     ],
   ];
 
@@ -55,7 +65,13 @@ function db_bundles_article_schema() {
         'not null' => TRUE,
         'default' => 0,
         'description' => "Creator timestamp",
-      ],      
+      ],     
+      'statitics' => [
+        'type' => 'int',
+        'not null' => TRUE,
+        'default' => 0,
+        'description' => "Creator statitics",
+      ], 
     ],
     'primary key' => ['aid'],
     'indexes' => [
