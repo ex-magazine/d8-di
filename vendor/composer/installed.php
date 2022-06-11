@@ -5,7 +5,7 @@
         'type' => 'project',
         'install_path' => __DIR__ . '/../../',
         'aliases' => array(),
-        'reference' => 'a4cfae8afbdc1318b278a035f8efb6200e955347',
+        'reference' => '9292dd6f004b45b4dbf77ad97c5feddf9f7e9db9',
         'name' => 'drupal/recommended-project',
         'dev' => true,
     ),
@@ -628,6 +628,15 @@
                 0 => '8.9.20',
             ),
         ),
+        'drupal/graphql' => array(
+            'pretty_version' => '3.1.0',
+            'version' => '3.1.0.0',
+            'type' => 'drupal-module',
+            'install_path' => __DIR__ . '/../../web/modules/contrib/graphql',
+            'aliases' => array(),
+            'reference' => '8.x-3.1',
+            'dev_requirement' => false,
+        ),
         'drupal/hal' => array(
             'dev_requirement' => false,
             'replaced' => array(
@@ -802,7 +811,7 @@
             'type' => 'project',
             'install_path' => __DIR__ . '/../../',
             'aliases' => array(),
-            'reference' => 'a4cfae8afbdc1318b278a035f8efb6200e955347',
+            'reference' => '9292dd6f004b45b4dbf77ad97c5feddf9f7e9db9',
             'dev_requirement' => false,
         ),
         'drupal/responsive_image' => array(
@@ -1554,6 +1563,15 @@
             'install_path' => __DIR__ . '/../webmozart/path-util',
             'aliases' => array(),
             'reference' => 'd939f7edc24c9a1bb9c0dee5cb05d8e859490725',
+            'dev_requirement' => false,
+        ),
+        'webonyx/graphql-php' => array(
+            'pretty_version' => 'v0.12.6',
+            'version' => '0.12.6.0',
+            'type' => 'library',
+            'install_path' => __DIR__ . '/../webonyx/graphql-php',
+            'aliases' => array(),
+            'reference' => '4c545e5ec4fc37f6eb36c19f5a0e7feaf5979c95',
             'dev_requirement' => false,
         ),
         'zendframework/zend-diactoros' => array(
