@@ -1,0 +1,11 @@
+services:
+  custom_site_settings.access_check_add:
+    class: Drupal\custom_site_settings\Access\CssAccessCheck
+    arguments: ['@current_user']
+    tags:
+      - { name: access_check, applies_to: _css_access_check }
+  custom_site_settings.route_subscriber:
+    class: Drupal\custom_site_settings\Routing\RouteSubscriber
+    tags:
+      - { name: event_subscriber }
+
