@@ -5,7 +5,7 @@
         'type' => 'project',
         'install_path' => __DIR__ . '/../../',
         'aliases' => array(),
-        'reference' => '950af4249a7edbbc9c47b157eaff9813b033b91a',
+        'reference' => 'a4cfae8afbdc1318b278a035f8efb6200e955347',
         'name' => 'drupal/recommended-project',
         'dev' => true,
     ),
@@ -802,7 +802,7 @@
             'type' => 'project',
             'install_path' => __DIR__ . '/../../',
             'aliases' => array(),
-            'reference' => '950af4249a7edbbc9c47b157eaff9813b033b91a',
+            'reference' => 'a4cfae8afbdc1318b278a035f8efb6200e955347',
             'dev_requirement' => false,
         ),
         'drupal/responsive_image' => array(
@@ -936,6 +936,15 @@
             'replaced' => array(
                 0 => '8.9.20',
             ),
+        ),
+        'drupal/views_bulk_operations' => array(
+            'pretty_version' => '4.0.0',
+            'version' => '4.0.0.0',
+            'type' => 'drupal-module',
+            'install_path' => __DIR__ . '/../../web/modules/contrib/views_bulk_operations',
+            'aliases' => array(),
+            'reference' => '4.0.0',
+            'dev_requirement' => false,
         ),
         'drupal/views_ui' => array(
             'dev_requirement' => false,

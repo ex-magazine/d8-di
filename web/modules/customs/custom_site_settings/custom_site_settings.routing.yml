@@ -1,10 +1,13 @@
 
 custom_site_settings.setting_form:
   path: '/custom-site-settings'
-  defaults:
+  defaults:    
     _form:  '\Drupal\custom_site_settings\Form\SettingForm'   
     _title: 'Setting form'
+  options:
+    _admin_route: false
   requirements:
-    _permission: 'administer mymodule'
+    _permission: 'administer mymodule'    
+    _css_access_check: 'TRUE'
 
 
