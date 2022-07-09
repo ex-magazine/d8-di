@@ -13,3 +13,7 @@
 ##git
 - git init
 - git pull git@github.com:ex-magazine/d8-di.git main
+- git branch -M main
+- git branch -a
+- git remote add origin git@github.com:ex-magazine/d9-test.git
+- git push -u origin main
