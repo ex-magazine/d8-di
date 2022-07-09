@@ -9,3 +9,7 @@
 ## 3) User non administer
 - User: non-administer
 - Pass: non-administer
+
+##git
+- git init
+- git pull git@github.com:ex-magazine/d8-di.git main
