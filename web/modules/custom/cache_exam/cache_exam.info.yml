@@ -1,0 +1,5 @@
+name: cache example
+type: module
+description: Create cache example.
+package: tommy
+core_version_requirement: ^8.8 || ^9

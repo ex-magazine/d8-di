@@ -1,0 +1,31 @@
+<?php
+
+use Drupal\Core\Cache\Cache;
+use Drupal\node\Entity\Node;
+
+/**
+ * Invalidate the custom tag if entities of type "page" get updated
+ */
+function cache_exam_node_update(Node $entity) {
+  if($entity->getType() === 'page') {
+    Cache::invalidateTags(['cache_exam_page_updates']);
+  }
+}
+
+/**
+ * Invalidate the custom tag if entities of type "page" get inserted
+ */
+function cache_exam_node_insert(Node $entity) {
+  if($entity->getType() === 'page') {
+    Cache::invalidateTags(['cache_exam_page_updates']);
+  }
+}
+
+/**
+ * Invalidate the custom tag if entities of type "page" get deleted
+ */
+function cache_exam_node_delete(Node $entity) {
+  if($entity->getType() === 'page') {
+    Cache::invalidateTags(['cache_exam_page_updates']);
+  }
+}
